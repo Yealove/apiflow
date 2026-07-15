@@ -98,7 +98,20 @@ git commit -m "描述信息"
 git push github main
 ```
 
-注意：项目有两个远程仓库 — `origin`（cnb.cool）和 `github`（https://github.com/Yealove/apiflow.git）。推送 GitHub 时使用 `github` 远程名称。
+注意：项目有两个远程仓库：
+- `origin` — https://cnb.cool/iwonder/apiflow.git
+- `github` — https://github.com/Yealove/apiflow.git
+
+添加 GitHub 远程仓库：
+```bash
+git remote add github https://github.com/Yealove/apiflow.git
+```
+
+推送代码：
+```bash
+git push origin main   # 推送到 cnb.cool
+git push github main   # 推送到 GitHub
+```
 
 ## 架构概览
 
