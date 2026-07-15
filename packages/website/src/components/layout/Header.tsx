@@ -23,7 +23,7 @@ export default function Header() {
   const repositoryLinks = [
     {
       name: t('GitHub'),
-      href: 'https://github.com/trueleaf/apiflow',
+      href: 'https://github.com/Yealove/apiflow',
       icon: '/github.svg',
       showStars: true
     }
@@ -82,7 +82,7 @@ export default function Header() {
                       className="w-4 h-4" 
                     />
                     {repo.showStars && (
-                      <GitHubStars repo="trueleaf/apiflow" className="ml-1" />
+                      <GitHubStars repo="Yealove/apiflow" className="ml-1" />
                     )}
                   </Link>
                 ))}
@@ -141,7 +141,7 @@ export default function Header() {
                       className="w-4 h-4" 
                     />
                     {repo.showStars && (
-                      <GitHubStars repo="trueleaf/apiflow" className="ml-auto" />
+                      <GitHubStars repo="Yealove/apiflow" className="ml-auto" />
                     )}
                   </Link>
                 ))}

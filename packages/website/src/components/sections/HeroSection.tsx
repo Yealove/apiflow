@@ -36,7 +36,7 @@ export default function HeroSection() {
             {/* CTA按钮 */}
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://github.com/trueleaf/apiflow/releases"
+                href="https://github.com/Yealove/apiflow/releases"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/20 hover:bg-blue-700 hover:scale-105 hover:shadow-blue-500/40 transition-all duration-200"

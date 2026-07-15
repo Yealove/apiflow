@@ -23,7 +23,7 @@ export const ClientWelcome = () => {
       console.log(`
 ${t('website')}：https://apiflow.cn
 
-${t('github')}：https://github.com/trueleaf/apiflow
+${t('github')}：https://github.com/Yealove/apiflow
 
 ${t('gitee')}：https://gitee.com/wildsell/apiflow
 

@@ -108,7 +108,7 @@ class UpdateManager {
     if (source === 'github') {
       autoUpdater.setFeedURL({
         provider: 'github',
-        owner: 'trueleaf',
+        owner: 'Yealove',
         repo: 'apiflow',
       })
     } else if (source === 'custom' && customUrl) {
@@ -130,7 +130,7 @@ class UpdateManager {
     if (source === 'github') {
       config = {
         provider: 'github',
-        owner: 'trueleaf',
+        owner: 'Yealove',
         repo: 'apiflow',
       }
     } else if (source === 'custom' && customUrl) {
@@ -188,7 +188,7 @@ class UpdateManager {
         } else if (this.currentSettings.source === 'github') {
           // 构建 GitHub Release 下载 URL
           const version = this.latestUpdateInfo.version
-          baseUrl = `https://github.com/trueleaf/apiflow/releases/download/v${version}/`
+          baseUrl = `https://github.com/Yealove/apiflow/releases/download/v${version}/`
           console.log('[UpdateManager] GitHub Release baseUrl:', baseUrl)
         }
         await this.downloadManager.startDownload(this.latestUpdateInfo, baseUrl)

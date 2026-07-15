@@ -8,14 +8,14 @@
 
 [中文](./README_CN.md) | English
 
-[![GitHub Release](https://img.shields.io/github/v/release/trueleaf/apiflow?style=flat-square)](https://github.com/trueleaf/apiflow/releases/latest)
-[![License](https://img.shields.io/github/license/trueleaf/apiflow)](https://github.com/trueleaf/apiflow/blob/master/LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/trueleaf/apiflow/total)](https://github.com/trueleaf/apiflow/releases/latest)
+[![GitHub Release](https://img.shields.io/github/v/release/Yealove/apiflow?style=flat-square)](https://github.com/Yealove/apiflow/releases/latest)
+[![License](https://img.shields.io/github/license/Yealove/apiflow)](https://github.com/Yealove/apiflow/blob/master/LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/Yealove/apiflow/total)](https://github.com/Yealove/apiflow/releases/latest)
 
-[Download](https://github.com/trueleaf/apiflow/releases)  | [Online Demo](https://apiflow.cn/)
+[Download](https://github.com/Yealove/apiflow/releases)  | [Online Demo](https://apiflow.cn/)
 
 
-<!-- [Download](https://github.com/trueleaf/apiflow/releases) ·
+<!-- [Download](https://github.com/Yealove/apiflow/releases) ·
 [Online Demo](https://apiflow.cn) -->
 <!-- [Documentation](https://www.yuque.com/apiflow) · -->
 
@@ -106,9 +106,9 @@ Download the latest version for your platform:
 
 | Platform | Download |
 |---------|----------|
-| Windows | https://github.com/trueleaf/apiflow/releases |
-| macOS | https://github.com/trueleaf/apiflow/releases |
-| Linux | https://github.com/trueleaf/apiflow/releases |
+| Windows | https://github.com/Yealove/apiflow/releases |
+| macOS | https://github.com/Yealove/apiflow/releases |
+| Linux | https://github.com/Yealove/apiflow/releases |
 
 
 ---
@@ -126,7 +126,7 @@ Download the latest version for your platform:
 #### First Deployment
 
 ```bash
-git clone https://github.com/trueleaf/apiflow
+git clone https://github.com/Yealove/apiflow
 cd apiflow
 
 cp .env.example .env
@@ -216,7 +216,7 @@ ELECTRON_BUILDER_BINARIES_MIRROR=https://npmmirror.com/mirrors/electron-builder-
 #### Step 2: Clone the repository and install dependencies
 
 ```bash
-git clone https://github.com/trueleaf/apiflow.git
+git clone https://github.com/Yealove/apiflow.git
 cd apiflow
 npm install
 ```
@@ -281,7 +281,7 @@ Build artifacts are located in `packages/web/release/`.
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/trueleaf/apiflow.git
+git clone https://github.com/Yealove/apiflow.git
 cd apiflow
 npm install
 ```

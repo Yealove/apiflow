@@ -58,9 +58,13 @@ docker compose up -d web
 
 ### Git
 ```bash
-# 推送到 GitHub（remote 名称为 'github'）
+# 推送代码到 GitHub（remote 名称为 'github'）
+git add -A
+git commit -m "描述信息"
 git push github main
 ```
+
+注意：项目有两个远程仓库 — `origin`（cnb.cool）和 `github`（https://github.com/Yealove/apiflow.git）。推送 GitHub 时使用 `github` 远程名称。
 
 ## 架构概览
 

@@ -8,11 +8,11 @@ Postman / Apifox 开源替代方案
 
 [English](./README.md) | 中文
 
-[![GitHub Release](https://img.shields.io/github/v/release/trueleaf/apiflow?style=flat-square)](https://github.com/trueleaf/apiflow/releases/latest)
-[![License](https://img.shields.io/github/license/trueleaf/apiflow)](https://github.com/trueleaf/apiflow/blob/master/LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/trueleaf/apiflow/total)](https://github.com/trueleaf/apiflow/releases/latest)
+[![GitHub Release](https://img.shields.io/github/v/release/Yealove/apiflow?style=flat-square)](https://github.com/Yealove/apiflow/releases/latest)
+[![License](https://img.shields.io/github/license/Yealove/apiflow)](https://github.com/Yealove/apiflow/blob/master/LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/Yealove/apiflow/total)](https://github.com/Yealove/apiflow/releases/latest)
 
-[下载](https://github.com/trueleaf/apiflow/releases) | [在线演Demo](https://apiflow.cn/)
+[下载](https://github.com/Yealove/apiflow/releases) | [在线演Demo](https://apiflow.cn/)
 
 
 </div>
@@ -101,9 +101,9 @@ Postman / Apifox 开源替代方案
 
 | 平台 | 下载地址 |
 |------|----------|
-| Windows | https://github.com/trueleaf/apiflow/releases |
-| macOS | https://github.com/trueleaf/apiflow/releases |
-| Linux | https://github.com/trueleaf/apiflow/releases |
+| Windows | https://github.com/Yealove/apiflow/releases |
+| macOS | https://github.com/Yealove/apiflow/releases |
+| Linux | https://github.com/Yealove/apiflow/releases |
 
 ---
 

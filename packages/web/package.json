@@ -1,9 +1,9 @@
 {
   "name": "apiflow",
   "description": "ApiFlow is a visual API design tool that allows users to create, manage, and visualize APIs in a graphical way.",
-  "author": "TrueLeaf Team",
+  "author": "Yealove Team",
   "license": "MIT",
-  "homepage": "https://github.com/trueleaf/apiflow",
+  "homepage": "https://github.com/Yealove/apiflow",
   "private": true,
   "version": "0.9.84",
   "type": "module",
@@ -157,7 +157,7 @@
   "build": {
     "productName": "ApiFlow",
     "appId": "cn.apiflow",
-    "copyright": "Copyright © 2025 TrueLeaf Team",
+    "copyright": "Copyright © 2025 Yealove Team",
     "directories": {
       "app": ".",
       "buildResources": "build",
@@ -199,8 +199,8 @@
       "requestedExecutionLevel": "asInvoker"
     },
     "appx": {
-      "applicationId": "TrueLeaf.ApiFlow",
-      "identityName": "TrueLeaf.ApiFlow",
+      "applicationId": "Yealove.ApiFlow",
+      "identityName": "Yealove.ApiFlow",
       "publisher": "CN=21922134-321C-42D0-80D1-D57E1992206A",
       "publisherDisplayName": "orange pig",
       "displayName": "ApiFlow",
@@ -267,7 +267,7 @@
       ]
     },
     "linux": {
-      "maintainer": "TrueLeaf Team <2581105856@qq.com>",
+      "maintainer": "Yealove Team <2581105856@qq.com>",
       "target": [
         {
           "target": "AppImage",

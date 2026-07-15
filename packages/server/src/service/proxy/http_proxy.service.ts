@@ -131,7 +131,7 @@ export class HttpProxyService {
     try {
       //准备请求头
       const headers: Record<string, string | undefined> = {
-        'user-agent': params.headers['user-agent'] || 'https://github.com/trueleaf/apiflow',
+        'user-agent': params.headers['user-agent'] || 'https://github.com/Yealove/apiflow',
         'accept': params.headers['accept'] || '*/*',
         'accept-encoding': params.headers['accept-encoding'] || 'gzip, deflate, br',
       };
@@ -278,7 +278,7 @@ export class HttpProxyService {
     try {
       //准备请求头
       const headers: Record<string, string | undefined> = {
-        'user-agent': params.headers['user-agent'] || 'https://github.com/trueleaf/apiflow',
+        'user-agent': params.headers['user-agent'] || 'https://github.com/Yealove/apiflow',
         'accept': params.headers['accept'] || '*/*',
         'accept-encoding': params.headers['accept-encoding'] || 'gzip, deflate, br',
       };

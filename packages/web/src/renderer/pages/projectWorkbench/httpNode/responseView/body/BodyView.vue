@@ -407,7 +407,7 @@ const isRedirectStatusCode = computed(() => {
 });
 const videoRef = ref<HTMLVideoElement>();
 const { t } = useI18n()
-const clientDownloadUrl = 'https://github.com/trueleaf/apiflow/releases'
+const clientDownloadUrl = 'https://github.com/Yealove/apiflow/releases'
 const isElectronEnv = isElectron()
 const showClientDownloadLink = computed(() => {
   return !isElectronEnv

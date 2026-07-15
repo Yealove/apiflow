@@ -281,7 +281,7 @@ If we make material changes to the Privacy Policy, we will notify you through:
 
 If you have any questions, comments, or requests regarding this Privacy Policy, please contact us through:
 
-- **GitHub Issues**: https://github.com/trueleaf/apiflow/issues
+- **GitHub Issues**: https://github.com/Yealove/apiflow/issues
 - **Email**: [Please see contact information on GitHub project homepage]
 - **Official Website**: https://apiflow.cn
 

@@ -19,11 +19,11 @@ const isCleanBuild = process.env.APIFLOW_CLEAN_BUILD === 'true'
 const brandName = isCleanBuild ? cleanBuildName : 'ApiFlow'
 const defaultServerUrl = isCleanBuild ? 'http://127.0.0.1:7001' : 'https://app.apiflow.cn'
 const officialUrl = isCleanBuild ? '' : 'https://apiflow.cn'
-const githubUrl = isCleanBuild ? '' : 'https://github.com/trueleaf/apiflow'
+const githubUrl = isCleanBuild ? '' : 'https://github.com/Yealove/apiflow'
 const giteeUrl = isCleanBuild ? '' : 'https://gitee.com/wildsell/apiflow'
-const releaseUrl = isCleanBuild ? '' : 'https://github.com/trueleaf/apiflow/releases'
-const licenseUrl = isCleanBuild ? '' : 'https://github.com/trueleaf/apiflow/blob/main/LICENSE'
-const copyright = isCleanBuild ? `Copyright © 2026 ${brandName}` : 'Copyright © 2026 TrueLeaf Team'
+const releaseUrl = isCleanBuild ? '' : 'https://github.com/Yealove/apiflow/releases'
+const licenseUrl = isCleanBuild ? '' : 'https://github.com/Yealove/apiflow/blob/main/LICENSE'
+const copyright = isCleanBuild ? `Copyright © 2026 ${brandName}` : 'Copyright © 2026 Yealove Team'
 const brandHtmlTitlePlugin = {
   name: 'brand-html-title',
   transformIndexHtml(html: string, context: { path: string }) {
