@@ -62,6 +62,8 @@ services:
       - DEPLOYMENT_TYPE=${DEPLOYMENT_TYPE:-user}
     ports:
       - "80:80"
+    volumes:
+      - ./packages/web/dist/web:/usr/share/nginx/html:ro
 
 volumes:
   mongo_data:

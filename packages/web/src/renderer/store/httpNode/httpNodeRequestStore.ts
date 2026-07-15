@@ -4,10 +4,12 @@ import { defineStore } from "pinia";
 import { ref, toRaw, watch } from "vue";
 import { useHttpNode } from "./httpNodeStore.ts";
 import { useVariable } from "../projectWorkbench/variablesStore.ts";
+import { useEnvironment } from "../projectWorkbench/environmentStore.ts";
 
 export const useHttpNodeRequest = defineStore('httpNodeRequest', () => {
   const httpNodeStore = useHttpNode();
   const httpNodeVariableStore = useVariable();
+  const environmentStore = useEnvironment();
   const fullUrl = ref('');
   const cancelRequestRef = ref<(() => void) | null>(null);
   const cancelRequest = () => {
@@ -28,6 +30,8 @@ export const useHttpNodeRequest = defineStore('httpNodeRequest', () => {
     return httpNodeStore.httpNodeInfo.item;
   }, () => {
     return httpNodeVariableStore.objectVariable;
+  }, () => {
+    return environmentStore.activeEnvironment?.baseUrl;
   }], () => {
     getFullUrl()
   }, {
