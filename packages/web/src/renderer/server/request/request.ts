@@ -15,6 +15,7 @@ import { httpNodeCache } from '@/cache/httpNode/httpNodeCache';
 import { httpResponseCache } from '@/cache/httpNode/httpResponseCache';
 import { commonHeaderCache } from '@/cache/project/commonHeadersCache';
 import { sendHistoryCache } from '@/cache/sendHistory/sendHistoryCache';
+import { nodeVariableCache } from '@/cache/variable/nodeVariableCache';
 import { config } from '@src/config/config';
 import { nanoid } from 'nanoid/non-secure';
 import { cloneDeep } from "lodash-es";
@@ -638,6 +639,7 @@ export const sendRequest = async () => {
   const variableStore = useVariable();
   const applyAfterScriptVariables = async (updatedVariables: Record<string, unknown>) => {
     const nextVariables = cloneDeep(variableStore.variables);
+    const isOffline = runtimeStore.networkMode === 'offline';
     Object.entries(updatedVariables).forEach(([key, value]) => {
       const existed = nextVariables.find(item => item.name === key);
       const valueInfo = (() => {
@@ -659,8 +661,17 @@ export const sendRequest = async () => {
       if (existed) {
         existed.type = valueInfo.type;
         existed.value = valueInfo.value;
+        // 离线模式下同步持久化到 IndexedDB
+        if (isOffline) {
+          nodeVariableCache.updateVariableById(existed._id, {
+            type: valueInfo.type,
+            value: valueInfo.value,
+          }).catch(err => {
+            console.error('离线模式更新变量到 IndexedDB 失败', err);
+          });
+        }
       } else {
-        nextVariables.push({
+        const newVar: ApidocVariable = {
           _id: nanoid(),
           projectId,
           name: key,
@@ -671,7 +682,14 @@ export const sendRequest = async () => {
             path: '',
             fileType: '',
           }
-        });
+        };
+        nextVariables.push(newVar);
+        // 离线模式下同步持久化新变量到 IndexedDB
+        if (isOffline) {
+          nodeVariableCache.addVariable(newVar).catch(err => {
+            console.error('离线模式新增变量到 IndexedDB 失败', err);
+          });
+        }
       }
     });
     await variableStore.replaceVariables(nextVariables);

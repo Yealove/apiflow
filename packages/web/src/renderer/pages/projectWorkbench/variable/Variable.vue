@@ -209,7 +209,7 @@ import SFieldset from '@/components/common/fieldset/ClFieldset.vue'
 import STable from '@/components/common/table/ClTable.vue'
 import { config } from '@src/config/config'
 import { useI18n } from 'vue-i18n'
-import { computed, ref, onMounted, defineAsyncComponent } from 'vue';
+import { computed, ref, onMounted, onActivated, defineAsyncComponent } from 'vue';
 import { ClConfirm } from '@/components/ui/cleanDesign/clConfirm/ClConfirm2';
 import { FormInstance, genFileId, UploadFile, UploadInstance, UploadProps, UploadRawFile } from 'element-plus';
 import { request } from '@/api/api';
@@ -483,6 +483,11 @@ onMounted(() => {
     message.error(t('初始化失败'));
   }
   window.addEventListener('variable:save', handleSaveEvent);
+})
+
+// keep-alive 激活时刷新数据（例如从请求页面切回来，后置脚本可能已更新变量）
+onActivated(() => {
+  getData();
 })
 
 onUnmounted(() => {

@@ -115,7 +115,8 @@ export const executeHttpAfterScript = async (
         hasResponse = true;
         clearTimeout(timeout);
         const afValue = e.data.value as { variables?: Record<string, unknown> };
-        worker.terminate();
+        // 延迟 terminate，给 console.log 足够时间输出到 DevTools
+        setTimeout(() => worker.terminate(), 100);
         resolve({
           success: true,
           updatedVariables: afValue.variables,
@@ -127,7 +128,8 @@ export const executeHttpAfterScript = async (
         const errorValue = e.data.value as { message?: string; stack?: string } | string;
         const errorMessage = typeof errorValue === 'string' ? errorValue : (errorValue.message || i18n.global.t('后置脚本执行失败'));
         const errorStack = typeof errorValue === 'string' ? undefined : errorValue.stack;
-        worker.terminate();
+        // 延迟 terminate，给 console.log 足够时间输出到 DevTools
+        setTimeout(() => worker.terminate(), 100);
         resolve({
           success: false,
           error: {

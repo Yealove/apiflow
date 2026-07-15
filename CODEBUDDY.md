@@ -47,13 +47,47 @@ npm --prefix packages/web run test:e2e:ui       # 交互式 UI 模式
 npm --prefix packages/web run test:e2e:headed   # 有头浏览器模式
 ```
 
-### Docker（生产环境）
+### Docker（开发/测试环境，推荐）
+
+首次启动步骤：
+
 ```bash
-# 启动全部服务（MongoDB + Server + Web + Website）
+# 1. 创建环境变量文件（若不存在）
+cp .env.example .env
+# 编辑 .env，确保 MONGO_ROOT_PASSWORD 已设置
+
+# 2. 构建前端产物（web 容器以 volume 挂载 dist/web）
+npm run web:build:web
+
+# 3. 启动全部服务（MongoDB + Server + Web + Website）
 docker compose up -d
 
-# 用本地构建产物重建 web 容器（dist/web 以 volume 挂载覆盖镜像）
-docker compose up -d web
+# 4. 验证服务状态
+docker compose ps
+# 四个服务全部显示 "healthy" 或 "running" 即为正常
+```
+
+服务端口：
+
+| 服务 | 端口 | 说明 |
+|------|------|------|
+| web | 80 | Nginx 提供 Vue SPA，挂载本地 `packages/web/dist/web` |
+| server | 7001 | Midway.js 后端 API，健康检查 `/api/health` |
+| mongo | 27017 | MongoDB 6，含认证 |
+| website | 3000 | 官网/产品落地页 |
+
+日常开发（修改前端代码后）：
+
+```bash
+# 重新构建前端产物即可，无需重启容器（volume 实时挂载）
+npm run web:build:web
+```
+
+重置环境（清除所有数据重新开始）：
+
+```bash
+docker compose down -v   # 删除容器和 volume（包括数据库数据）
+docker compose up -d     # 重新启动
 ```
 
 ### Git
